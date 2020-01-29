@@ -1,0 +1,25 @@
+{
+  "name": "banhmilog",
+  "version": "1.0.0",
+  "description": "banh mi logger",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenjch/banhMiLog.git"
+  },
+  "author": "jenjch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jenjch/banhMiLog/issues"
+  },
+  "homepage": "https://github.com/jenjch/banhMiLog#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.18.1"
+  }
+}
