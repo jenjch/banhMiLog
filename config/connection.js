@@ -1,11 +1,11 @@
-// set up MySQL connection.
+// require mysql
 const mysql = require("mysql");
 
 // require pw in separate file using module.exports
 const pw = require("./pw.js");
 
 
-
+// set up MySQL connection.
 const connection = mysql.createConnection({
   host: "localhost",
   port: 3306,

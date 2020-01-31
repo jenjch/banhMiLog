@@ -1,0 +1,47 @@
+<h1 align="center">Banh Mi!</h1>
+
+<div class="text-center">
+<img src="/assets/img/banhMi.png" alt="Banh Mi" class="img-fluid">
+</div>
+
+<h4 align="center">Add a banh mi sandwich!</h4>
+
+<form class="create-form">
+
+  <div class="form-group text-center">
+    <label for="banhmi"></label>
+    <input type="text" id="banhmi" name="banhmi">
+    <button type="submit" class="btn btn-info fas fa-plus-circle"> Add Banh Mi</button>
+  </div>
+
+</form>
+
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-6">
+      <ul class="text-center">
+        {{#each banhmi}}
+        {{#unless devoured}}
+        <p> {{this.id}}: {{this.banhmi_name}} </p>
+        <button type="button" data-id="{{this.id}}" class="devour-banhmi btn btn-success fas fa-utensils"> Devour!</button>
+        <br>
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="col-sm-6">
+      <ul class="text-center">
+        {{#each banhmi}}
+        {{#if devoured}}
+        <p> {{this.id}}: {{this.banhmi_name}} </p>
+        {{/if}}
+        {{/each}}
+        <br>
+      </ul>
+    </div>
+
+  </div>
+</div>
