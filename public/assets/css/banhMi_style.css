@@ -1,0 +1,45 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgb(223, 225, 231) !important;
+}
+
+.definition {
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+    width: 50%;
+    border: 1px solid black;
+}
+
+.addbanhmi {
+    padding: 10px;
+    margin-bottom: 3px;
+}
+
+.devour-banhmi {
+    margin-bottom: 3px;
+}
+
+.devoured {
+    padding: 16.5px;
+}
+
+.footer {
+    background-color: rgb(223, 225, 231);
+    font-weight: 500;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    width:100%;
+}
+
+.container {
+    padding-bottom: 80px;
+}
+
+#copyright {
+    position: relative;
+    top: 15px;
+}

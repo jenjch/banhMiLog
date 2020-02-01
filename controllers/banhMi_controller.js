@@ -33,7 +33,6 @@ router.post("/api/banhmi", function(req, res) {
   );
 });
 
-// add validation to not update empy entry?
 router.put("/api/banhmi/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
@@ -55,18 +54,5 @@ router.put("/api/banhmi/:id", function(req, res) {
   );
 });
 
-//   router.delete("/api/cats/:id", function(req, res) {
-//     var condition = "id = " + req.params.id;
-
-//     cat.delete(condition, function(result) {
-//       if (result.affectedRows == 0) {
-//         // If no rows were changed, then the ID must not exist, so 404
-//         return res.status(404).end();
-//       } else {
-//         res.status(200).end();
-//       }
-//     });
-//   });
-
-// Eeport routes for server.js to use.
+// Export routes for server.js to use.
 module.exports = router;

@@ -1,17 +1,22 @@
+<nav class ="navbar navbar-light bg-light text-center">
 <h1 align="center">Banh Mi!</h1>
+</nav>
+
+<p align="center" class="definition"> /ˈbän mē/
+<i>noun</i> (in Vietnamese cuisine) - a sandwich consisting of a baguette (traditionally baked with both rice and wheat flour) filled with a variety of ingredients, typically including meat, pickled vegetables, and chili peppers.</p>
 
 <div class="text-center">
-<img src="/assets/img/banhMi.png" alt="Banh Mi" class="img-fluid">
+<img src="/assets/img/banhMi.jpg" alt="Banh Mi" class="img-fluid">
 </div>
 
-<h4 align="center">Add a banh mi sandwich!</h4>
+<h4 align="center">add new banh mi!</h4>
 
 <form class="create-form">
 
   <div class="form-group text-center">
     <label for="banhmi"></label>
     <input type="text" id="banhmi" name="banhmi">
-    <button type="submit" class="btn btn-info fas fa-plus-circle"> Add Banh Mi</button>
+    <button type="submit" class="addbanhmi btn btn-info fas fa-plus-circle"> Add Banh Mi</button>
   </div>
 
 </form>
@@ -21,22 +26,21 @@
   <div class="row">
 
     <div class="col-sm-6">
-      <ul class="text-center">
+      <ul class="list-group text-center">
         {{#each banhmi}}
         {{#unless devoured}}
-        <p> {{this.id}}: {{this.banhmi_name}} </p>
-        <button type="button" data-id="{{this.id}}" class="devour-banhmi btn btn-success fas fa-utensils"> Devour!</button>
-        <br>
+        <li class="list-group-item"> {{this.id}}: {{this.banhmi_name}} <span class="pull-right">
+        <button type="button" data-id="{{this.id}}" class="devour-banhmi btn btn-success fas fa-utensils"> Devour!</button></span></li>
         {{/unless}}
         {{/each}}
       </ul>
     </div>
 
     <div class="col-sm-6">
-      <ul class="text-center">
+      <ul class="list-group text-center">
         {{#each banhmi}}
         {{#if devoured}}
-        <p> {{this.id}}: {{this.banhmi_name}} </p>
+        <il class="list-group-item disabled devoured"> {{this.id}}: {{this.banhmi_name}} Devoured!</il>
         {{/if}}
         {{/each}}
         <br>
@@ -45,3 +49,11 @@
 
   </div>
 </div>
+
+<footer class="footer">
+    <div class="row text-center">
+        <p class="col-sm-12" id="copyright"> 
+            Copyright &copy; 2020 JJC. All Rights Reserved.
+        </p>
+    </div>
+</footer>
