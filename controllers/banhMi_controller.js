@@ -21,8 +21,12 @@ router.get("/", function(req, res) {
   });
 });
 
-// add validation to not add empty entry?
 router.post("/api/banhmi", function(req, res) {
+  // validation for to make sure entries are not empty spaces
+  if (req.body.banhmi_name.trim().length<1) {
+    // returns "Not Acceptable" error (but only if the javascript sends the entry. Will not see this with validation also included on the front end javascript)
+    return res.status(406).end();
+  }
   banhMi.insertOne(
     ["banhmi_name", "devoured"],
     [req.body.banhmi_name, req.body.devoured],
