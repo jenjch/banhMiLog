@@ -19,7 +19,7 @@ The mySQL database is updated with each action.
 
 ## Process
 
-I followed the MVC design to first set up the folder structure (config, controllers, db, models, public, views, etc.). I then created the standard server.js, connection.js and sql files, and worked on the ORM, models js and controller files. The front end javascript and handlebars also were fleshed out in order to test the application further. The "Cats App" activity was used as a reference.    
+I followed the MVC design to first set up the folder structure (config, controllers, db, models, public, views, etc.). I then created the standard server.js, connection.js and sql files, and worked on the ORM, models js and controller files. The "Cats App" activity was used as a reference. The front end javascript and handlebars were fleshed out in order to test the application further. I added some validation on both the frontend Javascript and the backend controller to not accept empty entries (only spaces).
 
 The dependencies for the application are listed in the package.JSON file and a gitignore file is used to to skip and prevent upload of the node_modules folder to GitHub. 
 
