@@ -25,7 +25,7 @@ The dependencies for the application are listed in the package.JSON file and a g
 
 The password for the mySQL connection is stored on a separate pw.js file and included in the gitignore file to prevent upload to GitHub. 
 
-Heroku deployment required the setup of a JawsDB remote database. Procfile was also added to the root directory to resolve Heroku "cannot find module server.js" error.
+Heroku deployment required the setup of a JawsDB remote database and modifying the connection.js file. Procfile was also added to the root directory to resolve Heroku "cannot find module server.js" errors.
 
 ## Deployment
 
