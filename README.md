@@ -5,7 +5,7 @@ The aim of this project is to create a Node Express app, using a mySQL database 
 ## User Story
 
 ```
-As a banh mi aficionado 
+As a banh mi (vietnamese sandwich) aficionado 
 I want to be able to record and manage banh mi
 So that I can organize my list of banhmi varieties, and track ones I've eaten.
 
@@ -13,7 +13,7 @@ So that I can organize my list of banhmi varieties, and track ones I've eaten.
 
 ## Composition of Application
 
-Once deployed, the app allows users to add names of banh mi (vietnamese sandwiches), which renders them on the left side of the page along with a "devour" button. Once the devour button is clicked, it will move the banh mi entry to the right side of the page. 
+Once deployed, the app allows users to add names of banh mi, which renders them on the left side of the page along with a "devour" button. Once the devour button is clicked, it will move the banh mi entry to the right side of the page. 
 
 The mySQL database is updated with each action. 
 
@@ -25,6 +25,8 @@ The dependencies for the application are listed in the package.JSON file and a g
 
 The password for the mySQL connection is stored on a separate pw.js file and included in the gitignore file to prevent upload to GitHub. 
 
+Heroku deployment required the setup of a JawsDB remote database. Procfile was also added to the root directory to resolve Heroku "cannot find module server.js" error.
+
 ## Deployment
 
 The completed application is available for download on Github: 
@@ -35,7 +37,9 @@ Image of the application:
 ![Banh Mi Log](./banhMiLog.png)
 
 The deployed application is hosted on Heroku:
+https://blooming-wildwood-86554.herokuapp.com/
 
+The application is also linked to from my portfolio site: https://jenjch.github.io/updatedPortfolio/portfolio.html 
 
 ## Acceptance Criteria
 

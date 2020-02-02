@@ -1,20 +1,24 @@
 // wrap; make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
+
+  // on click send data
   $(".create-form").on("submit", function(event) {
     // make sure to preventDefault on a submit event
     event.preventDefault();
 
     var addBanhmi = {
+      // id used in handlebars
       banhmi_name: $("#banhmi")
         .val()
         .trim(),
+      // default devoured (false)
       devoured: 0
     };
     // added validation to prevent sending of emtry with only space(s)
     if (addBanhmi.banhmi_name.trim().length < 1) {
     // alert
     alert("please enter text!")
-    // empty the entry
+    // empty the entry if not valid entry
     $("#banhmi").val("");
       return;
     }
@@ -24,12 +28,13 @@ $(function() {
       data: addBanhmi
     }).then(function() {
       console.log("Added " + addBanhmi + "banh mi!");
-      alert("saved!");
+      // alert("saved!");
       // reload the page after addition to get the updated list
       location.reload();
     });
   });
 
+  // on click update data (devoured)
   $(".devour-banhmi").on("click", function(event) {
     // add preventDefault for on click
     event.preventDefault();
@@ -45,7 +50,7 @@ $(function() {
       type: "PUT",
       data: devouredStatus
     }).then(function() {
-      alert("updated!");
+      // alert("YUM!");
       console.log("Banh mi eaten!");
       // reload the page to get the updated list
       location.reload();

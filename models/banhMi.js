@@ -7,17 +7,20 @@ const orm = require("../config/orm.js");
 // update
 
 var banhMi = {
+  // displays all current data
     selectAll: function(cb) {
       orm.selectAll("banhmi", function(res) {
         cb(res);
       });
     },
-    // The variables cols and vals are arrays.
+    // adds a new entry
+    // the variables cols and vals are arrays.
     insertOne: function(cols, vals, cb) {
       orm.insertOne("banhmi", cols, vals, function(res) {
         cb(res);
       });
     },
+    // updates an entry by id
     updateOne: function(objColVals, condition, cb) {
       orm.updateOne("banhmi", objColVals, condition, function(res) {
         cb(res);
